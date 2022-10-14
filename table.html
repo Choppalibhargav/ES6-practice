@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+    body {
+        font-family: 'open sans', sans-serif;
+        background: #2c3e50;
+    }
+
+    nav {
+        position: relative;
+        width: 100%;
+        background: #34495e;
+        border-radius: 8px;
+        font-size: 0;
+        box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1);
+    }
+
+    nav a {
+        font-size: 15px;
+        text-transform: uppercase;
+        color: white;
+        text-decoration: none;
+        line-height: 50px;
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+        text-align: center;
+    }
+
+    nav .animation {
+        position: absolute;
+        height: 100%;
+        top: 0;
+        z-index: 0;
+        background: #1abc9c;
+        border-radius: 8px;
+        transition: all .5s ease 0s;
+    }
+
+    nav a:nth-child(1) {
+        width: 100px;
+    }
+
+    nav .start-home,
+    a:nth-child(1):hover~.animation {
+        width: 100px;
+        left: 0;
+
+    }
+
+    nav a:nth-child(2) {
+        width: 110px;
+
+    }
+
+    nav a:nth-child(2):hover~.animation {
+        width: 110px;
+        left: 100px;
+    }
+
+    nav a:nth-child(3) {
+        width: 160px;
+    }
+
+    nav a:nth-child(3):hover~.animation {
+        left: 210px;
+        width: 160px;
+    }
+
+    nav a:nth-child(4) {
+        width: 160px;
+    }
+
+    nav a:nth-child(4):hover~.animation {
+        width: 160px;
+        left: 370px;
+    }
+
+    nav a:nth-child(5) {
+        width: 160px;
+    }
+
+    nav a:nth-child(5):hover~.animation {
+        width: 160px;
+        left: 530px;
+    }
+    nav a:nth-child(6) {
+        width: 100px;
+    }
+
+    nav a:nth-child(6):hover~.animation {
+        width: 100px;
+        left: 690px;
+    }
+
+    nav a:nth-child(7) {
+        width: 100px;
+    }
+
+    nav a:nth-child(7):hover~.animation {
+        width: 100px;
+        left: 790px;
+    }
+    
+    table {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-collapse: collapse;
+        width: 800px;
+        height: 200px;
+        border: 1px solid #bdc3c7;
+        box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    tr {
+        transition: all .2s ease-in;
+        cursor: pointer;
+    }
+    
+    th,
+    td {
+        padding: 12px;
+        color: white;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    #header {
+        background-color: #16a085;
+        color: #fff;
+    }
+    
+    h1 {
+        font-weight: 600;
+        text-align: center;
+        background-color: #16a085;
+        color: #fff;
+        padding: 10px 0px;
+    }
+    
+    tr:hover {
+        background-color: #000;
+        transform: scale(1.02);
+        box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+   
+    input[type="button"] {
+        transition: all .3s;
+          border: 1px solid #ddd;
+          padding: 8px 16px;
+          text-decoration: none;
+          border-radius: 5px;
+          color: white;
+        font-size: 15px;
+      }
+      
+      input[type="button"]:not(.active) {
+        background-color:transparent;
+      }
+      
+      .active {
+        background-color: #1abc9c;
+        color :#fff;
+      }
+      
+      input[type="button"]:hover:not(.active) {
+        background-color: #ddd;
+      }
+</style>
+
+<body>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Files</a>
+        <a href="#">upload-sheet</a>
+        <a href="#">show-logs</a>
+        <a href="#">students-data</a>
+        <a href="#">Login</a>
+        <a href="#">Register</a>
+        <div class="animation start-home"></div>
+    </nav>
+
+    <h1>Eligible student list</h1>
+    <hr>
+
+    <table class="content-table" id="myTable">
+        <tr id="header">
+            <th>S.No</th>
+            <th>Regd.No</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Branch</th>
+            <th>10th%</th>
+            <th>inter/diploma</th>
+            <th>B.tech%</th>
+            <th>Backlogs</th>
+            <th>Mobile</th>
+            <th>Email</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>19NU1A05A1</td>
+            <td>SUDHEER</td>
+            <td>Female</td>
+            <td>CSE</td>
+            <td>90</td>
+            <td>80</td>
+            <td>80</td>
+            <td>0</td>
+            <td>0011223366</td>
+            <td>sudigalisudheer@gmail.com</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>19NU1A05A2</td>
+            <td>KUMAR</td>
+            <td>Male</td>
+            <td>CSE</td>
+            <td>90</td>
+            <td>80</td>
+            <td>80</td>
+            <td>0</td>
+            <td>0011223366</td>
+            <td>sudigalisudheer@gmail.com</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>19NU1A05A3</td>
+            <td>CHACHA</td>
+            <td>Female</td>
+            <td>CSE</td>
+            <td>90</td>
+            <td>80</td>
+            <td>80</td>
+            <td>0</td>
+            <td>0011223366</td>
+            <td>sudigalisudheer@gmail.com</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>19NU1A05A4</td>
+            <td>KIRAN</td>
+            <td>Male</td>
+            <td>MECH</td>
+            <td>90</td>
+            <td>80</td>
+            <td>80</td>
+            <td>0</td>
+            <td>0011223366</td>
+            <td>sudigalisudheer@gmail.com</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>19NU1A0555</td>
+            <td>LOL</td>
+            <td>Undefined</td>
+            <td>ECE</td>
+            <td>90</td>
+            <td>80</td>
+            <td>80</td>
+            <td>0</td>
+            <td>0011223366</td>
+            <td>sudigalisudheer@gmail.com</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>19NU1A0410</td>
+            <td>LMAO</td>
+            <td>Male</td>
+            <td>EEE</td>
+            <td>90</td>
+            <td>80</td>
+            <td>80</td>
+            <td>0</td>
+            <td>0011223366</td>
+            <td>sudigalisudheer@gmail.com</td>
+          </tr>
+
+    </table>
+    <script>
+        var $table = document.getElementById("myTable"),
+        $n = 3,
+        $rowCount = $table.rows.length,
+        $firstRow = $table.rows[0].firstElementChild.tagName,
+        $hasHead = ($firstRow === "TH"),
+        $tr = [],
+        $i,$ii,$j = ($hasHead)?1:0,
+        $th = ($hasHead?$table.rows[(0)].outerHTML:"");
+        var $pageCount = Math.ceil($rowCount / $n);
+        if ($pageCount > 1) {
+          for ($i = $j,$ii = 0; $i < $rowCount; $i++, $ii++)
+            $tr[$ii] = $table.rows[$i].outerHTML;
+          $table.insertAdjacentHTML("afterend","<div id='buttons'></div");
+          sort(1);
+        }
+        
+        function sort($p) {
+          var $rows = $th,$s = (($n * $p)-$n);
+          for ($i = $s; $i < ($s+$n) && $i < $tr.length; $i++)
+            $rows += $tr[$i];
+          $table.innerHTML = $rows;
+          document.getElementById("buttons").innerHTML = pageButtons($pageCount,$p);
+          document.getElementById("id"+$p).setAttribute("class","active");
+        }
+        
+        
+        function pageButtons($pCount,$cur) {
+          var	$prevDis = ($cur == 1)?"disabled":"",
+            $nextDis = ($cur == $pCount)?"disabled":"",
+            $buttons = "<input type='button' value='<< Prev' onclick='sort("+($cur - 1)+")' "+$prevDis+">";
+          for ($i=1; $i<=$pCount;$i++)
+            $buttons += "<input type='button' id='id"+$i+"'value='"+$i+"' onclick='sort("+$i+")'>";
+          $buttons += "<input type='button' value='Next >>' onclick='sort("+($cur + 1)+")' "+$nextDis+">";
+          return $buttons;
+        }
+        </script>
+
+</body>
+
+</html>
