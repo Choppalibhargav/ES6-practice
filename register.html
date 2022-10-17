@@ -68,6 +68,12 @@
             height: 80%;
             width: 100%;
           }
+
+          .left-side{
+            background-image: url(https://images6.alphacoders.com/104/1043122.png);
+            width: 100%;
+            background-size: cover;
+          }
           
           .right-side {
             display: flex;
@@ -112,16 +118,32 @@
             float: left;
           }
           
-          .welcomeimg {
-            height: 100%;
-            width: 70%;
-            margin: 0rem auto;
-          }
           
-          .wel-img-id {
-            width: 100%;
-            object-fit: cover;
+          h1 {
+            font-style: italic;
+            display: flex;
+            justify-content: center;
+            color: blue;
+            animation: neon 3s infinite;
+        }
+        @keyframes neon {
+  
+          0%,
+          39%,
+          41%,
+          59%,
+          61%,
+          100% {
+              text-shadow: white 0 0 12px,
+                  #04d29e 0 0 24px,
+                  #00ffcc 0 0 36px;
           }
+  
+          40%,
+          60% {
+              text-shadow: none;
+          }
+      }
         
           p{
             text-align: center;
@@ -143,6 +165,7 @@
     <div class="main-login">
         <div class="login-contain">
             <div class="right-side">
+              <h1>Register page</h1>
                 <form method="POST" action="">
                     <input type="text" placeholder="Gmail">
                     <input type="text" placeholder="username">
@@ -154,11 +177,8 @@
             </div>
 
             <div class="left-side">
-                <div class="welcomenote">
-                    <h3>Welcome</h3>
-                </div>
                 <div class="welcome-img">
-                    <img src="logo" id="wel-img-id" alt="" srcset="" />
+                    <img src="" id="wel-img-id"/>
                 </div>
 
             </div>

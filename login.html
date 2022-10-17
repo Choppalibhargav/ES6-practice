@@ -75,6 +75,12 @@
             justify-content: center;
             color: #ffffff;
           }
+          .right-side{
+            background-image: url(https://images6.alphacoders.com/104/1043122.png);
+            width: 100%;
+            background-size: cover;
+          }
+          
         
           label{
             color: black;
@@ -134,6 +140,32 @@
         p{
           text-align: center;
         }
+        h1 {
+          font-style: italic;
+          display: flex;
+          justify-content: center;
+          color: blue;
+          animation: neon 3s infinite;
+      }
+      @keyframes neon {
+
+        0%,
+        39%,
+        41%,
+        59%,
+        61%,
+        100% {
+            text-shadow: white 0 0 12px,
+                #04d29e 0 0 24px,
+                #00ffcc 0 0 36px;
+        }
+
+        40%,
+        60% {
+            text-shadow: none;
+        }
+    }
+
     </style>
 </head>
 
@@ -151,6 +183,7 @@
     <div class="main-login">
         <div class="login-contain">
             <div class="left-side">
+              <h1>Login page</h1>
                 <form method="POST" action="">
                     <input type="text" placeholder="username">
                     <input type="password" placeholder="password">
@@ -161,13 +194,6 @@
             </div>
 
             <div class="right-side">
-                <div class="welcomenote">
-                    <h3>Welcome</h3>
-                </div>
-                <div class="welcome-img">
-                    <img src="logo" id="wel-img-id" alt="" srcset="" />
-                </div>
-
             </div>
         </div>
     </div>
