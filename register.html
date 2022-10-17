@@ -8,6 +8,40 @@
     <link rel="stylesheet" href="../static/register.css">
     <title>Register</title>
     <style>
+      body{
+        font-family: 'open sans', sans-serif;
+        background: #2c3e50;
+        margin: 0;
+      }
+      nav {
+        position: relative;
+        width: 100%;
+        background: #34495e;
+        border-radius: 8px;
+        font-weight: 600;
+        box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1);
+    }
+
+    nav a {
+        display: flexbox;
+        margin: 10px;
+        font-size: 15px;
+        text-transform: uppercase;
+        color: white;
+        text-decoration: none;
+        line-height: 50px;
+        position: relative;
+        z-index: 1;
+        text-align: center;
+    }
+
+    a:hover {
+        width: 100%;
+        padding: 15px;
+        background: #1abc9c;
+        border-radius: 8px;
+        transition: all .5s ease 0s;
+    }
         .main-login {
             min-height: 100vh;
             max-width: 100vw;
@@ -96,6 +130,16 @@
 </head>
 
 <body>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Files</a>
+    <a href="#">upload-sheet</a>
+    <a href="#">show-logs</a>
+    <a href="#">students-data</a>
+    <a href="#">Login</a>
+    <a href="#">Register</a>
+    <div class="animation start-home"></div>
+</nav>
     <div class="main-login">
         <div class="login-contain">
             <div class="right-side">
