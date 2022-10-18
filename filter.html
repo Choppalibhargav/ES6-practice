@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Homepage</title>
+    <title>Filter</title>
     <link rel="stylesheet" href="style.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
@@ -11,11 +11,32 @@
         body {
             font-family: 'open sans', sans-serif;
             background: #2c3e50;
-            background-image: url('https://cdn.mos.cms.futurecdn.net/qXsVayNBGNZejBMQeYNiHa.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             margin: 0;
         }
+
+        
+        h1{
+            font-style: italic;
+            display: flex;
+            justify-content: center;
+            color: white;
+            animation: neon 3s infinite;
+        }
+
+        @keyframes neon{
+            0%,39%,41%,59%,61%,100%{
+                text-shadow: white 0 0 12px,
+                #04d29e 0 0 24px,
+                #00ffcc 0 0 36px;
+            }
+
+            40%,60%{
+                text-shadow: none;
+            }
+        }
+
 
         nav {
             position: relative;
@@ -144,8 +165,11 @@
         <a href="#">Register</a>
         <div class="animation start-home"></div>
     </nav>
+    <h1>Form Filter For Eligibility</h1>
 
     <form action="{{url_for('show_table')}}" method="POST">
+
+        
       
         <div class = box>
           <input type="text" name="company" placeholder="COMPANY NAME" required>
